@@ -37,7 +37,7 @@ while(userChoice !== "pari" && userChoice !== "dispari"){
 console.log(userChoice);
 
 // Scelta numero giocatore
-let userNumber = prompt("Scegli un numero compreso tra 1 e 5");
+let userNumber = Number.parseInt(prompt("Scegli un numero compreso tra 1 e 5"));
 
 while(userNumber < 1 || userNumber > 5 || Number.isNaN(userNumber)){
     userNumber = prompt("Scegli un numero compreso tra 1 e 5");
@@ -46,12 +46,26 @@ while(userNumber < 1 || userNumber > 5 || Number.isNaN(userNumber)){
 console.log(`Numero utente: ${userNumber}`)
 
 // Scelta numero computer
-let computerNumber = getRandomNumber(1, 5);
+let computerNumber = Number.parseInt(getRandomNumber(1, 5));
 
 function getRandomNumber(min, max){
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-console.log(`Numero computer: ${computerNumber}`)
+console.log(`Numero computer: ${computerNumber}`);
 
 // Somma numeri e scelta vincitore
+
+const numbersSum = userNumber + computerNumber
+
+function getEvenStatus(numberA){
+    if(numberA % 2 === 0){
+        return true
+    } else {
+        return false
+    }
+}
+
+let sumStatus = getEvenStatus(numbersSum)
+
+console.log(numbersSum ,sumStatus)
