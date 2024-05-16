@@ -8,4 +8,8 @@ function getReversedWord(word){
     return reversedWord
 }
 
-console.log(getReversedWord(userWord))
+if(userWord.toLocaleUpperCase === getReversedWord(userWord).toLocaleUpperCase){
+    console.log(`WOW! ${userWord} e ${getReversedWord(userWord)} sono uguali! è un palindtromo`)
+} else {
+    console.log(`${userWord} e ${getReversedWord(userWord)} sono differenti. Perciò niente palindromi oggi`)
+}
