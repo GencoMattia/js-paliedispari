@@ -1,4 +1,4 @@
-const userWord = prompt("Scegli una parola");
+const userWord = prompt.("Scegli una parola");
 
 function getReversedWord(word){
     let reversedWord = "";
@@ -8,7 +8,7 @@ function getReversedWord(word){
     return reversedWord
 }
 
-if(userWord.toLocaleUpperCase === getReversedWord(userWord).toLocaleUpperCase){
+if(userWord.toUpperCase === getReversedWord(userWord).toUpperCase){
     console.log(`WOW! ${userWord} e ${getReversedWord(userWord)} sono uguali! è un palindtromo`)
 } else {
     console.log(`${userWord} e ${getReversedWord(userWord)} sono differenti. Perciò niente palindromi oggi`)
