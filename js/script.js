@@ -34,4 +34,10 @@ while(userChoice !== "pari" && userChoice !== "dispari"){
     userChoice = prompt("Scegli: pari o dispari?");
 }
 
-console.log(userChoice)
+console.log(userChoice);
+
+let userNumber = prompt("Scegli un numero compreso tra 1 e 5");
+
+while(userNumber < 1 || userNumber > 5 || Number.isNaN(userNumber)){
+    userNumber = prompt("Scegli un numero compreso tra 1 e 5");
+}
