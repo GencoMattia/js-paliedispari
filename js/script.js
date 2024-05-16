@@ -54,18 +54,24 @@ function getRandomNumber(min, max){
 
 console.log(`Numero computer: ${computerNumber}`);
 
-// Somma numeri e scelta vincitore
-
+// Somma numeri e verifica se la somma è pari o dispari
 const numbersSum = userNumber + computerNumber
 
 function getEvenStatus(numberA){
     if(numberA % 2 === 0){
-        return true
+        return "pari"
     } else {
-        return false
+        return "dispari"
     }
 }
 
 let sumStatus = getEvenStatus(numbersSum)
 
 console.log(numbersSum ,sumStatus)
+
+// Dichiara il vincitore
+if(userChoice === sumStatus){
+    console.log(`Complimenti! La somma ${numbersSum} tra ${userNumber} e ${computerNumber} è ${sumStatus}`);
+} else {
+    console.log(`Mi spiace, vince l'IA. La somma ${numbersSum} tra ${userNumber} e ${computerNumber} è ${sumStatus}`);
+}
