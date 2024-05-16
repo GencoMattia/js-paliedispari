@@ -20,11 +20,18 @@ if(userWord.toUpperCase() === getReversedWord(userWord).toUpperCase()){
 
 // PARI E DISPARI
 
-let userChoice;
+// let userChoice;
 
-do {
+// do {
+//     userChoice = prompt("Scegli: pari o dispari?");
+// }
+// while(userChoice !== "pari" && userChoice !== "dispari");
+
+
+let userChoice = prompt("Scegli: pari o dispari?");
+
+while(userChoice !== "pari" && userChoice !== "dispari"){
     userChoice = prompt("Scegli: pari o dispari?");
 }
-while(userChoice !== "pari" && userChoice !== "dispari");
 
 console.log(userChoice)
