@@ -34,7 +34,7 @@ while(userChoice !== "pari" && userChoice !== "dispari"){
     userChoice = prompt("Scegli: pari o dispari?");
 }
 
-console.log(userChoice);
+console.log(`Scelta utente: ${userChoice}`);
 
 // Scelta numero giocatore
 let userNumber = Number.parseInt(prompt("Scegli un numero compreso tra 1 e 5"));
